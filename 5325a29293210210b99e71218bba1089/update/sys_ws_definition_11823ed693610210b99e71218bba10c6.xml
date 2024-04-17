@@ -13,18 +13,18 @@
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
         <service_id>azuread_ayan</service_id>
-        <short_description>TESt</short_description>
+        <short_description>TESt 0- AYan</short_description>
         <sys_class_name>sys_ws_definition</sys_class_name>
         <sys_created_by>ayan</sys_created_by>
         <sys_created_on>2024-04-16 06:48:32</sys_created_on>
         <sys_id>11823ed693610210b99e71218bba10c6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>AzureAd_ayan</sys_name>
         <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
         <sys_policy/>
         <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
         <sys_update_name>sys_ws_definition_11823ed693610210b99e71218bba10c6</sys_update_name>
         <sys_updated_by>ayan</sys_updated_by>
-        <sys_updated_on>2024-04-17 05:39:33</sys_updated_on>
+        <sys_updated_on>2024-04-17 05:50:15</sys_updated_on>
     </sys_ws_definition>
 </record_update>
