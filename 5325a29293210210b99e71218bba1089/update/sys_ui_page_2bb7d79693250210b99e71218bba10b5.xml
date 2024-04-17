@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function handleCancel() {
+    GlideDialogWindow.get().destroy();
+}
+
+function actionOK() {
+    $('form-page').hide();
+    $('api_progress').show();
+    $('api_progress').focus();
+    sendemail();
+}
+
+function sendemail() {
+    var gr = new GlideRecord('sys_user');
+    gr.addEncodedQuery('active=true');
+    gr.query();
+    while (gr.next()) {
+        gs.eventQueue('test_saba2', '', '', gr, gr.email);
+    }
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_980818_ayanmursh_SendEmail.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+   <style>
+		.horzinatal-line {
+			border-width: 0.5px;
+			border-style: solid;
+			border-color: #d1cbcb;
+			margin-top: 7px;
+			margin-bottom: 15px;
+		}
+		.loader {
+			margin-left: auto;
+			margin-right: auto;
+			border: 2px solid #dddddd;
+			border-radius: 50%;
+			border-top: 2px solid grey;
+			width: 20px;
+			height: 20px;
+			-webkit-animation: spin 1s linear infinite; /* Safari */
+			animation: spin 1s linear infinite;
+		}
+		/* Safari */
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		.warning {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}	
+		.warning-message {
+			color: red;
+		}
+		.warning-buttons {
+			margin-top: 30px;
+			min-width: 10em;
+		}
+		.warning-cancel {
+			margin-right: 2px;
+		}
+		.warning-continue {
+			margin-left: 2px;
+		}
+		.field {
+			display: flex;
+			margin-bottom: 10px;
+		}
+		.form-fields {
+			margin-top: 20px
+		}
+		.field-label {
+			width: 200px;
+			margin-left: 15px;
+			padding-top: 5px;
+		}
+		.field-label1 {
+			width: 75px;
+			margin-left: 15px;
+			padding-top: 5px;
+		}
+		.field-input1 {
+			height: fit-content;
+			width: 500px;
+			margin-left: 15px;
+			padding-top: 5px;
+		}
+		.field-input {
+			height: fit-content;
+			width: 400px;
+			line-height: 27px;
+			border-style: solid;
+			border-width: 1.5px;
+			border-radius: 4px;
+			border-color: #aaa;
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+		.sample-body {
+			resize: none;
+			height: 10em;
+		}
+		.form-buttons {
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		.form-cancel {
+			margin-right: 5px;
+		}
+		.value-empty::before {
+			content: '*';
+			margin-right: 4px;
+			color: red;
+		}
+		.value-not-empty::before {
+			content: '*';
+			margin-right: 4px;
+			color: grey;
+		}
+		.larger-input {	
+    		width: 500px;
+			line-height: 200px; /* Adjust this value as needed */
+		}
+
+		#api_progress {
+			display: none;
+		}
+
+		.container-td {
+			padding-top: 5px;
+		}
+
+		.top-buffer {
+			padding-top: 3px;
+		}
+
+		.bottom-buffer {
+			padding-bottom: 5px;
+		}
+		
+		#api_successful {
+			display: none;
+		}
+		
+		#api_failed {
+			display: none;
+		}
+		
+		.apiSuccess {
+			font-size:200%;
+			vertical-align:sub;
+			color:#71e279;
+		}
+
+		.apiFail {
+			font-size:200%;
+			vertical-align:sub;
+			color:#f95050;
+		}
+
+		.centerAlignContent {
+			text-align: center;
+		}
+
+	</style>
+<div class="form-fields" id="form-page" style="display: ${jvar_form_page_display}">
+    
+    <div class="field">
+        <label class="field-label" for="fname">${gs.getMessage('Subject')}</label>
+        <input type="text" name="fname" id="fname"/>
+		  </div>
+		 <div class="field">
+        <label class="field-label" for="lname">${gs.getMessage('Body')}</label>
+        <input type="html" name="lname" id="lname"/>
+    </div>
+   
+    <div class="form-buttons">
+        <button class="btn btn-default form-cancel" id="cancelData" onclick="return handleCancel()" style="min-width: 8em;" type="button">${gs.getMessage('Cancel')}</button>
+        <button class="btn btn-primary" id="submitData" onclick="return actionOK()" style="min-width: 8em;" type="button">${gs.getMessage('Submit')}</button>
+    </div>
+</div>
+<!-- End Form div -->
+<!-- API progress div -->
+<div tabindex="-1" id="api_progress" class="container-fluid form-horizontal">
+    <div class="centerAlignContent bottom-buffer">
+        <span class="icon icon-loading" />
+    </div>
+    <div class="centerAlignContent bottom-buffer">
+        <span id="start_text">${gs.getMessage('Submitting Request')}</span>
+    </div>
+</div>
+<!-- End API progress div -->
+<!-- API successful div -->
+<div tabindex="-1" id="api_successful" class="container-fluid form-horizontal">
+    <div class="centerAlignContent bottom-buffer">
+        <span class="icon icon-check-circle apiSuccess" />
+    </div>
+    <div class="centerAlignContent bottom-buffer">
+        <span id="complete_text">${gs.getMessage('Request submitted, details are available in worknotes')}</span>
+    </div>
+</div>
+<!-- End API successful div -->
+
+<!-- API failed div -->
+<div tabindex="-1" id="api_failed" class="container-fluid form-horizontal">
+    <div class="centerAlignContent bottom-buffer">
+        <span class="icon icon-cross-circle apiFail" />
+    </div>
+    <div class="centerAlignContent bottom-buffer">
+        <span id="err_text">${gs.getMessage('Error')}</span>
+    </div>
+</div>
+<!-- End API failed div -->
+
+</j:jelly>]]></html>
+        <name>SendEmail</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-04-16 09:34:19</sys_created_on>
+        <sys_id>2bb7d79693250210b99e71218bba10b5</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>SendEmail</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sys_ui_page_2bb7d79693250210b99e71218bba10b5</sys_update_name>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-04-16 13:09:12</sys_updated_on>
+    </sys_ui_page>
+</record_update>
