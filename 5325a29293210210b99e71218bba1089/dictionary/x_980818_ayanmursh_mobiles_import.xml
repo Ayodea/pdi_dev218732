@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6ca5bb7293fd4210b99e71218bba1022" extends="sys_import_set_row" label="Import Mobles Data Using API" max_length="40" name="x_980818_ayanmursh_mobiles_import" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Brand" label="Brand" max_length="40" name="u_brand" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Description" label="Description" max_length="40" name="u_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Max Price" label="Max Price" max_length="40" name="u_max_price" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name= Model Number" label=" Model Number" max_length="40" name="u_model_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Price" label="Price" max_length="40" name="u_price" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=RAM" label="RAM" max_length="40" name="u_ram" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ROM" label="ROM" max_length="40" name="u_rom" type="string"/>
+    </element>
+</database>

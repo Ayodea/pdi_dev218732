@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d332ba3a93794210b99e71218bba10c3" label="Mobiles" max_length="40" name="x_980818_ayanmursh_mobiles" type="collection">
+        <element label="Brand" max_length="100" name="brand" type="string"/>
+        <element label="Camera Quality" max_length="40" name="camera_quality" type="string"/>
+        <element label="Description" max_length="400" name="description" type="string_full_utf8"/>
+        <element label="Max Retail Price" max_length="100" name="max_retail_price" type="price"/>
+        <element label="Model Number" max_length="100" name="model_number" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Price" max_length="100" name="price" type="price"/>
+        <element label="RAM" max_length="40" name="ram" type="string"/>
+        <element label="ROM" max_length="40" name="rom" type="string"/>
+    </element>
+</database>

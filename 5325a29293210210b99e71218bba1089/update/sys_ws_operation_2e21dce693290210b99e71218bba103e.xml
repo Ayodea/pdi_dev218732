@@ -6,7 +6,7 @@
         <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <http_method>POST</http_method>
-        <name>RestAPI/AddUsersToGroup</name>
+        <name>RestAPI/RemoveUsersFromGroup</name>
         <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
     this.status = '200';
@@ -16,12 +16,14 @@
     var scop = payload.scop;
     var domainname = payload.domainname;
     var groupname = payload.groupname;
-
+    var user = userglide();
+    var group = groupglide();
     var grp = new GlideRecord('sys_user_grmember');
-    grp.addQuery('user.email', userPrincipalName);
-    grp.addQuery('group.name', groupname);
+    grp.addQuery('user', user);
+    grp.addQuery('group', group);
     grp.query();
     if (grp.next()) {
+        grp.deleteRecord();
         this.status = '200';
         respObj.body = {
             "OU Name": "OU=Accounts,DC=division-dc1,DC=local",
@@ -32,13 +34,13 @@
         };
 
     } else {
-        this.status = '401';
+        this.status = '402';
         respObj.body = {
-            "OU Name": "OU=Accounts,DC=division-dc1,DC=local",
+            "ou_name": "OU=Accounts,DC=division-dc1,DC=local",
             "statusMessage": "User not in Group",
             "Name": groupname,
             "User Email ": userPrincipalName,
-            "status": "301"
+            "status": "402"
         };
     }
 
@@ -50,9 +52,27 @@
     } else {
         var setError = new sn_ws_err.ServiceError(); //this API used to set the custom error messages
         setError.setStatus(this.status);
-        setError.setMessage(respObj.body.message);
-        setError.setDetail(respObj.body.detail);
+        setError.setMessage(respObj.body.statusMessage);
+        setError.setDetail(respObj.body.ou_name);
         return setError;
+    }
+
+    function userglide() {
+        var groupu = new GlideRecord('sys_user');
+        groupu.addQuery('email', userPrincipalName);
+        groupu.query();
+        if (groupu.next()) {
+            return groupu.getUniqueValue();
+        }
+    }
+
+    function groupglide() {
+        var groupu = new GlideRecord('sys_user_group');
+        groupu.addQuery('name', groupname);
+        groupu.query();
+        if (groupu.next()) {
+            return groupu.getUniqueValue();
+        }
     }
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_980818_ayanmursh/azuread_ayan/RestAPI/RemoveUsersFromGroup</operation_uri>
@@ -68,14 +88,14 @@
         <sys_created_by>ayan</sys_created_by>
         <sys_created_on>2024-04-16 13:41:40</sys_created_on>
         <sys_id>2e21dce693290210b99e71218bba103e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>RestAPI/AddUsersToGroup</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RestAPI/RemoveUsersFromGroup</sys_name>
         <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
         <sys_policy/>
         <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
         <sys_update_name>sys_ws_operation_2e21dce693290210b99e71218bba103e</sys_update_name>
         <sys_updated_by>ayan</sys_updated_by>
-        <sys_updated_on>2024-04-16 13:41:40</sys_updated_on>
+        <sys_updated_on>2024-04-30 06:03:38</sys_updated_on>
         <web_service_definition display_value="AzureAd_ayan">11823ed693610210b99e71218bba10c6</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

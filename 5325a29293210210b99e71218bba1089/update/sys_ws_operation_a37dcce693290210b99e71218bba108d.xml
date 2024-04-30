@@ -16,23 +16,18 @@
     var scop = payload.scop;
     var domainname = payload.domainname;
     var groupname = payload.groupname;
-
+    var user = userglide();
+    var groupu = groupglide();
     var grp = new GlideRecord('sys_user_grmember');
-    grp.addQuery('user.email', userPrincipalName);
-    grp.addQuery('group.name', groupname);
+    grp.addQuery('user', user);
+    grp.addQuery('group', groupu);
     grp.query();
     if (!grp.next()) {
-        var user = new GlideRecord('sys_user');
-        user.addQuery('email', userPrincipalName);
-        user.query();
-        if (user.next()) {
-            var grpp = new GlideRecord('sys_user_group');
-            grpp.addQuery('name', groupname);
-            grpp.query();
-            if (grpp.next()) {
+        if (user) {
+            if (groupu) {
                 grp.initialize();
                 grp.user = user;
-                grp.group = grpp;
+                grp.group = groupu;
                 grp.insert();
                 this.status = '200';
                 respObj.body = {
@@ -43,7 +38,7 @@
                     "status": "200"
                 };
             } else {
-                this.status = '401';
+                this.status = '200';
                 respObj.body = {
                     "OU Name": "OU=Accounts,DC=division-dc1,DC=local",
                     "statusMessage": "Group does'n exist in AzureAd.",
@@ -54,7 +49,7 @@
             }
 
         } else {
-            this.status = '401';
+            this.status = '200';
             respObj.body = {
                 "OU Name": "OU=Accounts,DC=division-dc1,DC=local",
                 "statusMessage": "User does'n exist in AzureAd.",
@@ -65,7 +60,7 @@
         }
 
     } else {
-        this.status = '401';
+        this.status = '200';
         respObj.body = {
             "OU Name": "OU=Accounts,DC=division-dc1,DC=local",
             "statusMessage": "User already in Group",
@@ -87,6 +82,24 @@
         setError.setDetail(respObj.body.detail);
         return setError;
     }
+
+    function userglide() {
+        var groupu = new GlideRecord('sys_user');
+        groupu.addQuery('email', userPrincipalName);
+        groupu.query();
+        if (groupu.next()) {
+            return groupu.getUniqueValue();
+        }
+    }
+
+    function groupglide() {
+        var groupu = new GlideRecord('sys_user_group');
+        groupu.addQuery('name', groupname);
+        groupu.query();
+        if (groupu.next()) {
+            return groupu.getUniqueValue();
+        }
+    }
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_980818_ayanmursh/azuread_ayan/RestAPI/AddUsersToGroup</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
@@ -101,14 +114,14 @@
         <sys_created_by>ayan</sys_created_by>
         <sys_created_on>2024-04-16 13:25:51</sys_created_on>
         <sys_id>a37dcce693290210b99e71218bba108d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>RestAPI/AddUsersToGroup</sys_name>
         <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
         <sys_policy/>
         <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
         <sys_update_name>sys_ws_operation_a37dcce693290210b99e71218bba108d</sys_update_name>
         <sys_updated_by>ayan</sys_updated_by>
-        <sys_updated_on>2024-04-16 13:39:03</sys_updated_on>
+        <sys_updated_on>2024-04-30 06:15:31</sys_updated_on>
         <web_service_definition display_value="AzureAd_ayan">11823ed693610210b99e71218bba10c6</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

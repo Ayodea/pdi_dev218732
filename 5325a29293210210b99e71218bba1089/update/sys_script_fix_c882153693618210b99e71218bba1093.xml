@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>Testing </name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[    var gr = new GlideRecord('sys_user_group');
+    gr.addQuery('name', 'TEstingg');
+    gr.query();
+    if (!gr.next()) {
+        gr.initialize();
+        gr.name = 'TEstingg';
+        // grp.description = "Scop : " + "scop" + " Domain : " + "domainname" + " Product Name : " + "productname";
+        gr.insert();
+    }]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-04-17 13:05:55</sys_created_on>
+        <sys_id>c882153693618210b99e71218bba1093</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Testing </sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sys_script_fix_c882153693618210b99e71218bba1093</sys_update_name>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-04-17 13:05:55</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
