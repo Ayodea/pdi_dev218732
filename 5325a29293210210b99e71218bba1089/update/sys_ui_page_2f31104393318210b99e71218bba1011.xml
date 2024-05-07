@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function handleCancel() {
+    // var incnumber = RP.getWindowProperties().get('number');
+    // var incnumber = $('record').value;
+    ///  gs.log(incnumber + "  AYANMURSHAD");
+    GlideDialogWindow.get().destroy();
+
+}
+
+
+function actionOK() {
+    //var incnumber = RP.getWindowProperties().get('number');
+    g_form.setValue('work_notes', 'Group Type :' + $('groupType').value + '\n' + 'Group Description :' +$('groupType').value);
+        alert($('groupType').value); GlideDialogWindow.get().destroy();
+    }]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_980818_ayanmursh_GroupInfo.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<j:jelly xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+  <j:set var="windowWidth" value="100px" />
+  <j:set var="windowHeight" value="100px" />
+
+  <html>
+    <head>
+      <title>Group Information</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #f4f4f4;
+        }
+
+        .container {
+           max-width: 400px; /* Changed width to max-width */
+          height: ${windowHeight};
+          background-color: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin: auto;
+          overflow: hidden;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-group label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+
+        .form-group input {
+          width: 70%;
+          padding: 10px;
+          font-size: 8px;
+        }
+
+        .buttons {
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        .buttons button {
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+
+        .buttons button:last-child {
+          margin-right: 0;
+        }
+      </style>	
+    </head>
+	<g:evaluate var="jvar_sysId" expression="RP.getWindowProperties().sysID"/>
+<g:evaluate jelly="true" object="true">
+	var sysid = RP.getWindowProperties().get('sysID');
+	sysid;
+	<!-- var test = 'TESTING'; -->
+
+</g:evaluate>
+<g:evaluate>
+	<!-- var sysid = RP.getWindowProperties().get('sysID');
+	sysid;
+	var test = 'TESTING'; -->
+	var inc = new GlideRecord('incident');
+	inc.addQuery('sys_id', sysid);
+	inc.query();
+	if(inc.next()){
+	inc;
+	}else{
+		inc = 'TEST';
+	}
+
+</g:evaluate>
+    <body>
+	${sysid} tEST
+	${test}
+	${inc}
+      <div class="container">
+        <div class="form-group">
+          <label for="groupType">Group Type</label>
+		  <input type="text" id="groupType" name="groupType" placeholder="Enter Group Type" />
+
+        </div>
+
+        <div class="form-group">
+          <label for="groupDescription">Group Description</label>
+          <input type="text" id="groupDescription" name="groupDescription" placeholder="Enter Group Description"/>
+		<input class="field-input form-control readonly disabled" type="hidden" name="record" id="record" value="${inc.sys_id}" />
+        </div>
+
+        <div class="buttons">
+          <button id="submitBtn" onclick="return actionOK()">Submit</button>
+          <button id="cancelBtn" onclick="return handleCancel()">Cancel</button>
+        </div>
+      </div>
+
+      <!-- <script>
+        function submitForm() {
+          // Add your submit logic here
+          console.log("Form submitted");
+        }
+
+        function cancelForm() {
+          // Add your cancel logic here
+          console.log("Form canceled");
+        }
+      </script> -->
+    </body>
+  </html>
+</j:jelly>
+]]></html>
+        <name>GroupInfo</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-04-30 13:20:09</sys_created_on>
+        <sys_id>2f31104393318210b99e71218bba1011</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>GroupInfo</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sys_ui_page_2f31104393318210b99e71218bba1011</sys_update_name>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-05-03 09:37:08</sys_updated_on>
+    </sys_ui_page>
+</record_update>

@@ -20,7 +20,207 @@ function sendemail() {
         gs.eventQueue('test_saba2', '', '', gr, gr.email);
     }
 }]]></client_script>
-        <description/>
+        <description>&lt;?xml version="1.0" encoding="utf-8" ?&gt;&#13;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;&#13;
+   &lt;style&gt;&#13;
+		.horzinatal-line {&#13;
+			border-width: 0.5px;&#13;
+			border-style: solid;&#13;
+			border-color: #d1cbcb;&#13;
+			margin-top: 7px;&#13;
+			margin-bottom: 15px;&#13;
+		}&#13;
+		.loader {&#13;
+			margin-left: auto;&#13;
+			margin-right: auto;&#13;
+			border: 2px solid #dddddd;&#13;
+			border-radius: 50%;&#13;
+			border-top: 2px solid grey;&#13;
+			width: 20px;&#13;
+			height: 20px;&#13;
+			-webkit-animation: spin 1s linear infinite; /* Safari */&#13;
+			animation: spin 1s linear infinite;&#13;
+		}&#13;
+		/* Safari */&#13;
+		@-webkit-keyframes spin {&#13;
+		  0% { -webkit-transform: rotate(0deg); }&#13;
+		  100% { -webkit-transform: rotate(360deg); }&#13;
+		}&#13;
+		@keyframes spin {&#13;
+		  0% { transform: rotate(0deg); }&#13;
+		  100% { transform: rotate(360deg); }&#13;
+		}&#13;
+		.warning {&#13;
+			display: flex;&#13;
+			flex-direction: column;&#13;
+			align-items: center;&#13;
+		}	&#13;
+		.warning-message {&#13;
+			color: red;&#13;
+		}&#13;
+		.warning-buttons {&#13;
+			margin-top: 30px;&#13;
+			min-width: 10em;&#13;
+		}&#13;
+		.warning-cancel {&#13;
+			margin-right: 2px;&#13;
+		}&#13;
+		.warning-continue {&#13;
+			margin-left: 2px;&#13;
+		}&#13;
+		.field {&#13;
+			display: flex;&#13;
+			margin-bottom: 10px;&#13;
+		}&#13;
+		.form-fields {&#13;
+			margin-top: 20px&#13;
+		}&#13;
+		.field-label {&#13;
+			width: 200px;&#13;
+			margin-left: 15px;&#13;
+			padding-top: 5px;&#13;
+		}&#13;
+		.field-label1 {&#13;
+			width: 75px;&#13;
+			margin-left: 15px;&#13;
+			padding-top: 5px;&#13;
+		}&#13;
+		.field-input1 {&#13;
+			height: fit-content;&#13;
+			width: 500px;&#13;
+			margin-left: 15px;&#13;
+			padding-top: 5px;&#13;
+		}&#13;
+		.field-input {&#13;
+			height: fit-content;&#13;
+			width: 400px;&#13;
+			line-height: 27px;&#13;
+			border-style: solid;&#13;
+			border-width: 1.5px;&#13;
+			border-radius: 4px;&#13;
+			border-color: #aaa;&#13;
+			padding-left: 4px;&#13;
+			padding-right: 4px;&#13;
+		}&#13;
+		.sample-body {&#13;
+			resize: none;&#13;
+			height: 10em;&#13;
+		}&#13;
+		.form-buttons {&#13;
+			display: flex;&#13;
+			justify-content: center;&#13;
+			margin-top: 20px;&#13;
+			margin-bottom: 10px;&#13;
+		}&#13;
+		.form-cancel {&#13;
+			margin-right: 5px;&#13;
+		}&#13;
+		.value-empty::before {&#13;
+			content: '*';&#13;
+			margin-right: 4px;&#13;
+			color: red;&#13;
+		}&#13;
+		.value-not-empty::before {&#13;
+			content: '*';&#13;
+			margin-right: 4px;&#13;
+			color: grey;&#13;
+		}&#13;
+		.larger-input {	&#13;
+    		width: 500px;&#13;
+			line-height: 200px; /* Adjust this value as needed */&#13;
+		}&#13;
+&#13;
+		#api_progress {&#13;
+			display: none;&#13;
+		}&#13;
+&#13;
+		.container-td {&#13;
+			padding-top: 5px;&#13;
+		}&#13;
+&#13;
+		.top-buffer {&#13;
+			padding-top: 3px;&#13;
+		}&#13;
+&#13;
+		.bottom-buffer {&#13;
+			padding-bottom: 5px;&#13;
+		}&#13;
+		&#13;
+		#api_successful {&#13;
+			display: none;&#13;
+		}&#13;
+		&#13;
+		#api_failed {&#13;
+			display: none;&#13;
+		}&#13;
+		&#13;
+		.apiSuccess {&#13;
+			font-size:200%;&#13;
+			vertical-align:sub;&#13;
+			color:#71e279;&#13;
+		}&#13;
+&#13;
+		.apiFail {&#13;
+			font-size:200%;&#13;
+			vertical-align:sub;&#13;
+			color:#f95050;&#13;
+		}&#13;
+&#13;
+		.centerAlignContent {&#13;
+			text-align: center;&#13;
+		}&#13;
+&#13;
+	&lt;/style&gt;&#13;
+&lt;div class="form-fields" id="form-page" style="display: ${jvar_form_page_display}"&gt;&#13;
+    &#13;
+    &lt;div class="field"&gt;&#13;
+        &lt;label class="field-label" for="fname"&gt;${gs.getMessage('Subject')}&lt;/label&gt;&#13;
+        &lt;input type="text" name="fname" id="fname"/&gt;&#13;
+		  &lt;/div&gt;&#13;
+		 &lt;div class="field"&gt;&#13;
+        &lt;label class="field-label" for="lname"&gt;${gs.getMessage('Body')}&lt;/label&gt;&#13;
+        &lt;input type="html" name="lname" id="lname"/&gt;&#13;
+    &lt;/div&gt;&#13;
+   &#13;
+    &lt;div class="form-buttons"&gt;&#13;
+        &lt;button class="btn btn-default form-cancel" id="cancelData" onclick="return handleCancel()" style="min-width: 8em;" type="button"&gt;${gs.getMessage('Cancel')}&lt;/button&gt;&#13;
+        &lt;button class="btn btn-primary" id="submitData" onclick="return actionOK()" style="min-width: 8em;" type="button"&gt;${gs.getMessage('Submit')}&lt;/button&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- End Form div --&gt;&#13;
+&lt;!-- API progress div --&gt;&#13;
+&lt;div tabindex="-1" id="api_progress" class="container-fluid form-horizontal"&gt;&#13;
+    &lt;div class="centerAlignContent bottom-buffer"&gt;&#13;
+        &lt;span class="icon icon-loading" /&gt;&#13;
+    &lt;/div&gt;&#13;
+    &lt;div class="centerAlignContent bottom-buffer"&gt;&#13;
+        &lt;span id="start_text"&gt;${gs.getMessage('Submitting Request')}&lt;/span&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- End API progress div --&gt;&#13;
+&lt;!-- API successful div --&gt;&#13;
+&lt;div tabindex="-1" id="api_successful" class="container-fluid form-horizontal"&gt;&#13;
+    &lt;div class="centerAlignContent bottom-buffer"&gt;&#13;
+        &lt;span class="icon icon-check-circle apiSuccess" /&gt;&#13;
+    &lt;/div&gt;&#13;
+    &lt;div class="centerAlignContent bottom-buffer"&gt;&#13;
+        &lt;span id="complete_text"&gt;${gs.getMessage('Request submitted, details are available in worknotes')}&lt;/span&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- End API successful div --&gt;&#13;
+&#13;
+&lt;!-- API failed div --&gt;&#13;
+&lt;div tabindex="-1" id="api_failed" class="container-fluid form-horizontal"&gt;&#13;
+    &lt;div class="centerAlignContent bottom-buffer"&gt;&#13;
+        &lt;span class="icon icon-cross-circle apiFail" /&gt;&#13;
+    &lt;/div&gt;&#13;
+    &lt;div class="centerAlignContent bottom-buffer"&gt;&#13;
+        &lt;span id="err_text"&gt;${gs.getMessage('Error')}&lt;/span&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/div&gt;&#13;
+&lt;!-- End API failed div --&gt;&#13;
+&#13;
+&lt;/j:jelly&gt;</description>
         <direct>false</direct>
         <endpoint>x_980818_ayanmursh_SendEmail.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
@@ -230,13 +430,13 @@ function sendemail() {
         <sys_created_by>ayan</sys_created_by>
         <sys_created_on>2024-04-16 09:34:19</sys_created_on>
         <sys_id>2bb7d79693250210b99e71218bba10b5</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>SendEmail</sys_name>
         <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
         <sys_policy/>
         <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
         <sys_update_name>sys_ui_page_2bb7d79693250210b99e71218bba10b5</sys_update_name>
         <sys_updated_by>ayan</sys_updated_by>
-        <sys_updated_on>2024-04-16 13:09:12</sys_updated_on>
+        <sys_updated_on>2024-04-30 13:43:04</sys_updated_on>
     </sys_ui_page>
 </record_update>
