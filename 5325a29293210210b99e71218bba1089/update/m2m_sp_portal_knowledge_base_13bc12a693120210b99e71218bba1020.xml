@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_knowledge_base">
+    <m2m_sp_portal_knowledge_base action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <kb_knowledge_base display_value="Knowledge">dfc19531bf2021003f07e2c1ac0739ab</kb_knowledge_base>
+        <order>100</order>
+        <sp_portal display_value="Service Desk">e24cd66693120210b99e71218bba10a1</sp_portal>
+        <sys_class_name>m2m_sp_portal_knowledge_base</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:38:34</sys_created_on>
+        <sys_id>13bc12a693120210b99e71218bba1020</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Knowledge.Service Desk</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>m2m_sp_portal_knowledge_base_13bc12a693120210b99e71218bba1020</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:38:34</sys_updated_on>
+    </m2m_sp_portal_knowledge_base>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>other</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+   c.data.greeting = 'Hi ' + scope.user.first_name + ', how can we help you?';
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.sp-tagline-color {
+	color: $sp-tagline-color;
+}
+
+#homepage-search {
+  .aisearch {
+    --classicsponlydonotuse--rem-multipy: 1.6;
+  }
+}
+  </css>
+        <data_table>sp_instance_ais</data_table>
+        <demo_data/>
+        <description>&lt;div id="homepage-search" class="hidden-xs wrapper-xl"&gt;&#13;
+  &lt;div class="wrapper-xl"&gt;&#13;
+  	&lt;h2 class="text-center text-4x m-b-lg sp-tagline-color" ng-bind="options.title"&gt;&lt;/h2&gt;&#13;
+  	&lt;div ng-if="options.short_description" class="text-center h4 m-b-lg sp-tagline-color" ng-bind="options.short_description"&gt;&lt;/div&gt;&#13;
+  	&lt;sp-widget widget="data.typeAheadSearch"&gt;&lt;/sp-widget&gt;&#13;
+  &lt;/div&gt;&#13;
+&lt;/div&gt;</description>
+        <docs/>
+        <field_list>title,short_description,search_application,search_results_configuration,disable_all_suggestions,placeholder,ai_search_source_filter</field_list>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>AM Homepage Search</name>
+        <option_schema>[{"name":"typeahead_search","default_value":"{title: 'How can we help?', size: 'lg', color: 'default'}","section":"Presentation","label":"Typeahead Search","type":"string"}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[var aisEnabled = $sp.isAISearchEnabled();
+
+if (aisEnabled)
+	data.typeAheadSearch = $sp.getWidget('typeahead-search', options);
+else
+	data.typeAheadSearch = $sp.getWidget('typeahead-search', options.typeahead_search);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:40:36</sys_created_on>
+        <sys_id>8d3d56a693120210b99e71218bba10d0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>AM Homepage Search</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sp_widget_8d3d56a693120210b99e71218bba10d0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:58:34</sys_updated_on>
+        <template><![CDATA[
+<div id="homepage-search" class="hidden-xs wrapper-xl">
+  <div class="wrapper-xl">
+  	<!-- <h2 class="text-center text-3x m-b-lg sp-tagline-color" ng-bind="options.title"></h2> -->
+    <h3 class="text-center text-3x m-b-lg sp-tagline-color" >{{data.greeting}}</h3>
+  	<div ng-if="options.short_description" class="text-center h4 m-b-lg sp-tagline-color" ng-bind="options.short_description"></div>
+  	<sp-widget widget="data.typeAheadSearch" />
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

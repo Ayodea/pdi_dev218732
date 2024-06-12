@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="INSERT_OR_UPDATE">
+        <child display_value="AM Homepage Search">8d3d56a693120210b99e71218bba10d0</child>
+        <cloned>2024-05-24 06:40:37</cloned>
+        <last_validated>2024-05-24 06:40:37</last_validated>
+        <parent display_value="Homepage Search">200fbd96cb20020000f8d856634c9ca1</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;other&lt;/category&gt;&lt;client_script/&gt;&lt;controller_as/&gt;&lt;css&gt;.sp-tagline-color {
+	color: $sp-tagline-color;
+}
+
+#homepage-search {
+  .aisearch {
+    --classicsponlydonotuse--rem-multipy: 1.6;
+  }
+}
+  &lt;/css&gt;&lt;data_table&gt;sp_instance_ais&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list&gt;title,short_description,search_application,search_results_configuration,disable_all_suggestions,placeholder,ai_search_source_filter&lt;/field_list&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;Homepage Search&lt;/name&gt;&lt;option_schema&gt;[{"name":"typeahead_search","default_value":"{title: 'How can we help?', size: 'lg', color: 'default'}","section":"Presentation","label":"Typeahead Search","type":"string"}]&lt;/option_schema&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[var aisEnabled = $sp.isAISearchEnabled();
+
+if (aisEnabled)
+	data.typeAheadSearch = $sp.getWidget('typeahead-search', options);
+else
+	data.typeAheadSearch = $sp.getWidget('typeahead-search', options.typeahead_search);]]&gt;&lt;/script&gt;&lt;servicenow&gt;true&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-06-11 23:02:03&lt;/sys_created_on&gt;&lt;sys_id&gt;200fbd96cb20020000f8d856634c9ca1&lt;/sys_id&gt;&lt;sys_mod_count&gt;151&lt;/sys_mod_count&gt;&lt;sys_name&gt;Homepage Search&lt;/sys_name&gt;&lt;sys_package display_value="Service Portal - Core" source="com.glide.service-portal"&gt;b8af8824d9f13110cedf7dffddb48f4b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_200fbd96cb20020000f8d856634c9ca1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-09-26 05:11:14&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div id="homepage-search" class="hidden-xs wrapper-xl"&gt;
+  &lt;div class="wrapper-xl"&gt;
+  	&lt;h2 class="text-center text-4x m-b-lg sp-tagline-color" ng-bind="options.title"&gt;&lt;/h2&gt;
+  	&lt;div ng-if="options.short_description" class="text-center h4 m-b-lg sp-tagline-color" ng-bind="options.short_description"&gt;&lt;/div&gt;
+  	&lt;sp-widget widget="data.typeAheadSearch"&gt;&lt;/sp-widget&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:40:37</sys_created_on>
+        <sys_id>493d9ea693120210b99e71218bba106e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>8d3d56a693120210b99e71218bba10d0</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_493d9ea693120210b99e71218bba106e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:40:37</sys_updated_on>
+    </sp_rel_widget_clone>
+</record_update>
