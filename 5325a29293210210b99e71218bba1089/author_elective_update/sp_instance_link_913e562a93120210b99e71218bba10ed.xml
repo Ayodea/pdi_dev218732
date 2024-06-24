@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>briefcase</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description>Browse the catalog for services and items you need</short_description>
+        <size>md</size>
+        <sp_column display_value="1">993e562a93120210b99e71218bba10ea</sp_column>
+        <sp_page display_value="sc_category">07261a2147132100ba13a5554ee49092</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:44:59</sys_created_on>
+        <sys_id>913e562a93120210b99e71218bba10ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Something</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sp_instance_link_913e562a93120210b99e71218bba10ed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:44:59</sys_updated_on>
+        <title>Request Something</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"template": {
+		"value": "Color Box",
+		"displayValue": "Color Box"
+	},
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=913e562a93120210b99e71218bba10ed"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AyanMurshad">5325a29293210210b99e71218bba1089</application>
+        <file_path/>
+        <instance_id>d0e63aba1ba6f9906a85eb9b2d4bcb5a</instance_id>
+        <instance_name>dev218732</instance_name>
+        <name>sp_instance_link_913e562a93120210b99e71218bba10ed</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;briefcase&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description&gt;Browse the catalog for services and items you need&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;993e562a93120210b99e71218bba10ea&lt;/sp_column&gt;&lt;sp_page display_value="sc_category"&gt;07261a2147132100ba13a5554ee49092&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-24 06:44:59&lt;/sys_created_on&gt;&lt;sys_id&gt;913e562a93120210b99e71218bba10ed&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Request Something&lt;/sys_name&gt;&lt;sys_package display_value="AyanMurshad" source="x_980818_ayanmursh"&gt;5325a29293210210b99e71218bba1089&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AyanMurshad"&gt;5325a29293210210b99e71218bba1089&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_913e562a93120210b99e71218bba10ed&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-24 06:44:59&lt;/sys_updated_on&gt;&lt;title&gt;Request Something&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"template": {
+		"value": "Color Box",
+		"displayValue": "Color Box"
+	},
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=913e562a93120210b99e71218bba10ed"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1129060471</payload_hash>
+        <record_name>Request Something</record_name>
+        <reverted_from/>
+        <source>7fa3092f93310210b99e71218bba10b3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:44:59</sys_created_on>
+        <sys_id>993e562a93120210b99e71218bba10ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fa9587cf20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:44:59</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>9d3e562aa1120210c35f81638d77aeee</update_guid>
+        <update_guid_history>9d3e562aa1120210c35f81638d77aeee:-1129060471</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Request Something">3427eeb193a20210b99e71218bba1069</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-03 09:44:14</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>06a7d28a2c4c484b80934fa33546edb9</sys_id>
+        <sys_metadata>913e562a93120210b99e71218bba10ed</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Request Something</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_scope_delete display_value="">912560221d694a0a97f51b632cf7c284</sys_scope_delete>
+        <sys_update_name>sp_instance_link_913e562a93120210b99e71218bba10ed</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_913e562a93120210b99e71218bba10ed">993e562a93120210b99e71218bba10ef</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-03 09:44:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>create</operation>
+        <source_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-04-17 10:58:24</sys_created_on>
+        <sys_id>30657cfa93ad4210b99e71218bba107b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_user_group</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sys_scope_privilege_30657cfa93ad4210b99e71218bba107b</sys_update_name>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-04-17 10:58:24</sys_updated_on>
+        <target_name>sys_user_group</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AyanMurshad">5325a29293210210b99e71218bba1089</application>
+        <file_path/>
+        <instance_id>d0e63aba1ba6f9906a85eb9b2d4bcb5a</instance_id>
+        <instance_name>dev218732</instance_name>
+        <name>sys_scope_privilege_30657cfa93ad4210b99e71218bba107b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>create</operation><source_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>ayan</sys_created_by><sys_created_on>2024-04-17 10:58:24</sys_created_on><sys_id>30657cfa93ad4210b99e71218bba107b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>sys_user_group</sys_name><sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package><sys_policy/><sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope><sys_update_name>sys_scope_privilege_30657cfa93ad4210b99e71218bba107b</sys_update_name><sys_updated_by>ayan</sys_updated_by><sys_updated_on>2024-04-17 10:58:24</sys_updated_on><target_name>sys_user_group</target_name><target_scope display_value="Global">global</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>-1797878813</payload_hash>
+        <record_name>sys_user_group</record_name>
+        <reverted_from/>
+        <source>b8b6665a93210210b99e71218bba104c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-04-17 10:58:24</sys_created_on>
+        <sys_id>3065b03293ed4210b99e71218bba1062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18eebb534390000001</sys_recorded_at>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-04-17 10:58:24</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>bc657cfafcad4210f87d6f2fee64ab7c</update_guid>
+        <update_guid_history>bc657cfafcad4210f87d6f2fee64ab7c:-1797878813</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-04-17 11:10:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>1babc6c5678a428c8450a8c5466c2b90</sys_id>
+        <sys_metadata>30657cfa93ad4210b99e71218bba107b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sys_user_group</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_scope_delete display_value="">912560221d694a0a97f51b632cf7c284</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_30657cfa93ad4210b99e71218bba107b</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_30657cfa93ad4210b99e71218bba107b">3065b03293ed4210b99e71218bba1062</sys_update_version>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-04-17 11:10:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

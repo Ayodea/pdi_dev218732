@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_ais">
+    <sp_instance_ais action="DELETE">
+        <active>true</active>
+        <ai_search_source_filter/>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <disable_all_suggestions>false</disable_all_suggestions>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <placeholder/>
+        <roles/>
+        <search_application/>
+        <search_results_configuration/>
+        <short_description/>
+        <size>lg</size>
+        <sp_column display_value="1">cd3e562a93120210b99e71218bba10d6</sp_column>
+        <sp_widget display_value="AM Homepage Search">8d3d56a693120210b99e71218bba10d0</sp_widget>
+        <spell_check_font_size>xl</spell_check_font_size>
+        <sys_class_name>sp_instance_ais</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:46:54</sys_created_on>
+        <sys_id>1daeda2a93120210b99e71218bba10fa</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>HI How can we help?</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sp_instance_ais_1daeda2a93120210b99e71218bba10fa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:52:41</sys_updated_on>
+        <title>HI How can we help?</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"typeahead_search": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_ais>
+    <sys_translated_text action="DELETE" query="documentkey=1daeda2a93120210b99e71218bba10fa"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AyanMurshad">5325a29293210210b99e71218bba1089</application>
+        <file_path/>
+        <instance_id>d0e63aba1ba6f9906a85eb9b2d4bcb5a</instance_id>
+        <instance_name>dev218732</instance_name>
+        <name>sp_instance_ais_1daeda2a93120210b99e71218bba10fa</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_ais"&gt;&lt;sp_instance_ais action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;ai_search_source_filter/&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;disable_all_suggestions&gt;false&lt;/disable_all_suggestions&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;placeholder/&gt;&lt;roles/&gt;&lt;search_application/&gt;&lt;search_results_configuration/&gt;&lt;short_description/&gt;&lt;size&gt;lg&lt;/size&gt;&lt;sp_column display_value="1"&gt;cd3e562a93120210b99e71218bba10d6&lt;/sp_column&gt;&lt;sp_widget display_value="AM Homepage Search"&gt;8d3d56a693120210b99e71218bba10d0&lt;/sp_widget&gt;&lt;spell_check_font_size&gt;xl&lt;/spell_check_font_size&gt;&lt;sys_class_name&gt;sp_instance_ais&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-05-24 06:46:54&lt;/sys_created_on&gt;&lt;sys_id&gt;1daeda2a93120210b99e71218bba10fa&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;HI How can we help?&lt;/sys_name&gt;&lt;sys_package display_value="AyanMurshad" source="x_980818_ayanmursh"&gt;5325a29293210210b99e71218bba1089&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AyanMurshad"&gt;5325a29293210210b99e71218bba1089&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_ais_1daeda2a93120210b99e71218bba10fa&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-05-24 06:52:41&lt;/sys_updated_on&gt;&lt;title&gt;HI How can we help?&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"typeahead_search": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_ais&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=1daeda2a93120210b99e71218bba10fa"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1754973381</payload_hash>
+        <record_name>HI How can we help?</record_name>
+        <reverted_from/>
+        <source>7fa3092f93310210b99e71218bba10b3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:52:41</sys_created_on>
+        <sys_id>79ff9aaa93120210b99e71218bba108e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fa95f86ec0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:52:41</sys_updated_on>
+        <type>Instance with Search</type>
+        <update_guid>fdff9aaaa6120210e57fdab775d2c88d</update_guid>
+        <update_guid_history>fdff9aaaa6120210e57fdab775d2c88d:1754973381,365fde6aae12021042ee681855c44acc:-1905403166,ed3f126ac61202103c65cf10e8815daa:1435807742,91aeda2abb120210abe1897cfc9e3efc:-1535696785</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="HI How can we help?">1f766e3193a20210b99e71218bba10a8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-03 09:41:25</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_ais">sp_instance_ais</sys_db_object>
+        <sys_id>66dd152949e34a609e756d3cca2ca064</sys_id>
+        <sys_metadata>1daeda2a93120210b99e71218bba10fa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HI How can we help?</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_scope_delete display_value="">912560221d694a0a97f51b632cf7c284</sys_scope_delete>
+        <sys_update_name>sp_instance_ais_1daeda2a93120210b99e71218bba10fa</sys_update_name>
+        <sys_update_version display_value="sp_instance_ais_1daeda2a93120210b99e71218bba10fa">79ff9aaa93120210b99e71218bba108e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-03 09:41:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

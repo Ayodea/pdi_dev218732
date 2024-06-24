@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">993e962a93120210b99e71218bba100a</sp_column>
+        <sp_widget display_value="My Surveys">04b1cc07c3231200e44574e1c1d3ae96</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:45:00</sys_created_on>
+        <sys_id>953e962a93120210b99e71218bba1019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Surveys</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sp_instance_953e962a93120210b99e71218bba1019</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:45:00</sys_updated_on>
+        <title>My Surveys</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=953e962a93120210b99e71218bba1019"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AyanMurshad">5325a29293210210b99e71218bba1089</application>
+        <file_path/>
+        <instance_id>d0e63aba1ba6f9906a85eb9b2d4bcb5a</instance_id>
+        <instance_name>dev218732</instance_name>
+        <name>sp_instance_953e962a93120210b99e71218bba1019</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="2">993e962a93120210b99e71218bba100a</sp_column><sp_widget display_value="My Surveys">04b1cc07c3231200e44574e1c1d3ae96</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-05-24 06:45:00</sys_created_on><sys_id>953e962a93120210b99e71218bba1019</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Surveys</sys_name><sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package><sys_policy/><sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope><sys_update_name>sp_instance_953e962a93120210b99e71218bba1019</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-05-24 06:45:00</sys_updated_on><title>My Surveys</title><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=953e962a93120210b99e71218bba1019"/></record_update>]]></payload>
+        <payload_hash>-1245718381</payload_hash>
+        <record_name>My Surveys</record_name>
+        <reverted_from/>
+        <source>7fa3092f93310210b99e71218bba10b3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-24 06:45:00</sys_created_on>
+        <sys_id>d53e962a93120210b99e71218bba101b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fa9587ed10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-24 06:45:00</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>d93e962a1e12021034fc4b8d45aaf51a</update_guid>
+        <update_guid_history>d93e962a1e12021034fc4b8d45aaf51a:-1245718381</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Surveys">2d276eb193a20210b99e71218bba10de</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-03 09:44:17</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>1e30271ce175412490532e2d6701bfc4</sys_id>
+        <sys_metadata>953e962a93120210b99e71218bba1019</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Surveys</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_scope_delete display_value="">912560221d694a0a97f51b632cf7c284</sys_scope_delete>
+        <sys_update_name>sp_instance_953e962a93120210b99e71218bba1019</sys_update_name>
+        <sys_update_version display_value="sp_instance_953e962a93120210b99e71218bba1019">d53e962a93120210b99e71218bba101b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-03 09:44:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
