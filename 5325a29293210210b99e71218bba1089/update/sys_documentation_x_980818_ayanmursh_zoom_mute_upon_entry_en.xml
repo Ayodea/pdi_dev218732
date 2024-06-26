@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="mute_upon_entry" label="Mute Upon Entry" language="en" table="x_980818_ayanmursh_zoom">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>mute_upon_entry</element>
+            <help/>
+            <hint/>
+            <label>Mute Upon Entry</label>
+            <language>en</language>
+            <name>x_980818_ayanmursh_zoom</name>
+            <plural>Mute Upon Entries</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>ayan</sys_created_by>
+            <sys_created_on>2024-06-26 07:49:09</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Mute Upon Entry</sys_name>
+            <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+            <sys_update_name>sys_documentation_x_980818_ayanmursh_zoom_mute_upon_entry_en</sys_update_name>
+            <sys_updated_by>ayan</sys_updated_by>
+            <sys_updated_on>2024-06-26 07:49:09</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

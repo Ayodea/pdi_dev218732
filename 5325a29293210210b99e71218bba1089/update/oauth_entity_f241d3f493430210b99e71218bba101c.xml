@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity">
+    <oauth_entity action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <access_token_lifespan>1800</access_token_lifespan>
+        <active>true</active>
+        <auth_code_lifespan>0</auth_code_lifespan>
+        <auth_url>https://zoom.us/oauth/authorize</auth_url>
+        <certificate_url/>
+        <client_id>JX9Qs0YeSwSLaMr2hFL3GA</client_id>
+        <client_secret>﷞﷟﷒15035a7b93d00210b99e71218bba1091﷬﷔1﷬﷭YaAxu6vNPwjIaSMPRW8elg==vqek8rBWfEmNF898_2-ry5F95LEpBkbq1HtMF20b0kgoO741E2dyVdOtYM8ll5_K﷮﷯</client_secret>
+        <client_uuid>7241d3f493430210b99e71218bba101c</client_uuid>
+        <code_challenge_method>S256</code_challenge_method>
+        <comments/>
+        <default_grant_type>authorization_code</default_grant_type>
+        <id_token_lifespan>0</id_token_lifespan>
+        <jwt_provider/>
+        <login_url/>
+        <logo_url/>
+        <message_signature_lifespan>0</message_signature_lifespan>
+        <mobile_client>false</mobile_client>
+        <name>Zoom_integration</name>
+        <oauth_api_script/>
+        <protocol_name/>
+        <public_client>false</public_client>
+        <redirect_url>https://dev218732.service-now.com/oauth_redirect.do</redirect_url>
+        <refresh_token_lifespan>8640000</refresh_token_lifespan>
+        <refresh_token_url/>
+        <restricted_binding>false</restricted_binding>
+        <revoke_token_url/>
+        <salt>0</salt>
+        <send_client_credentials_as>request_body_parameter</send_client_credentials_as>
+        <skip_authorize>false</skip_authorize>
+        <sys_class_name>oauth_entity</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-06-25 06:50:37</sys_created_on>
+        <sys_id>f241d3f493430210b99e71218bba101c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Zoom_integration</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>oauth_entity_f241d3f493430210b99e71218bba101c</sys_update_name>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-06-25 06:50:37</sys_updated_on>
+        <token_url>https://zoom.us/oauth/token</token_url>
+        <type>oauth_provider</type>
+        <use_mutual_auth>false</use_mutual_auth>
+        <user/>
+    </oauth_entity>
+</record_update>

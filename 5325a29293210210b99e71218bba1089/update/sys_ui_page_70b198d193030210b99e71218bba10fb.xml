@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>&lt;?xml version="1.0" encoding="utf-8"?&gt;&#13;
+&lt;j:jelly xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;&#13;
+  &lt;j:set var="windowWidth" value="100px" /&gt;&#13;
+  &lt;j:set var="windowHeight" value="100px" /&gt;&#13;
+&#13;
+  &lt;html&gt;&#13;
+    &lt;head&gt;&#13;
+      &lt;title&gt;Group Information&lt;/title&gt;&#13;
+      &lt;style&gt;&#13;
+        body {&#13;
+          font-family: Arial, sans-serif;&#13;
+          margin: 0;&#13;
+          padding: 20px;&#13;
+          background-color: #f4f4f4;&#13;
+        }&#13;
+&#13;
+        .container {&#13;
+           max-width: 400px; /* Changed width to max-width */&#13;
+          height: ${windowHeight};&#13;
+          background-color: #fff;&#13;
+          padding: 30px;&#13;
+          border-radius: 10px;&#13;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);&#13;
+          margin: auto;&#13;
+          overflow: hidden;&#13;
+        }&#13;
+&#13;
+        .form-group {&#13;
+          margin-bottom: 20px;&#13;
+        }&#13;
+&#13;
+        .form-group label {&#13;
+          display: block;&#13;
+          font-weight: bold;&#13;
+          margin-bottom: 16px;&#13;
+        }&#13;
+&#13;
+        .form-group input {&#13;
+          width: 70%;&#13;
+          padding: 10px;&#13;
+          font-size: 8px;&#13;
+        }&#13;
+&#13;
+        .buttons {&#13;
+          text-align: center;&#13;
+          margin-top: 30px;&#13;
+        }&#13;
+&#13;
+        .buttons button {&#13;
+          padding: 10px 20px;&#13;
+          font-size: 16px;&#13;
+          cursor: pointer;&#13;
+          margin-right: 10px;&#13;
+        }&#13;
+&#13;
+        .buttons button:last-child {&#13;
+          margin-right: 0;&#13;
+        }&#13;
+      &lt;/style&gt;	&#13;
+    &lt;/head&gt;&#13;
+	&lt;g:evaluate var="jvar_sysId" expression="RP.getWindowProperties().sysID"/&gt;&#13;
+&lt;g:evaluate jelly="true" object="true"&gt;&#13;
+	var sysid = RP.getWindowProperties().get('sysID');&#13;
+	sysid;&#13;
+&#13;
+&lt;/g:evaluate&gt;&#13;
+&lt;g:evaluate&gt;&#13;
+&#13;
+	var inc = new GlideRecord('incident');&#13;
+	inc.addQuery('sys_id', sysid);&#13;
+	inc.query();&#13;
+	if(inc.next()){&#13;
+	inc;&#13;
+	}else{&#13;
+		inc = 'TEST';&#13;
+	}&#13;
+&#13;
+&lt;/g:evaluate&gt;&#13;
+    &lt;body&gt;&#13;
+	${sysid} tEST&#13;
+	${test}&#13;
+	${inc}&#13;
+      &lt;div class="container"&gt;&#13;
+        &lt;div class="form-group"&gt;&#13;
+          &lt;label for="groupType"&gt;Subject&lt;/label&gt;&#13;
+		  &lt;input type="text" id="groupType" name="groupType" placeholder="Enter Subject" /&gt;&#13;
+&#13;
+        &lt;/div&gt;&#13;
+&#13;
+        &lt;div class="form-group"&gt;&#13;
+          &lt;label for="groupDescription"&gt;Agenda&lt;/label&gt;&#13;
+          &lt;input type="text" id="groupDescription" name="groupDescription" placeholder="Enter Agenda"/&gt;&#13;
+		&lt;input class="field-input form-control readonly disabled" type="hidden" name="record" id="record" value="${inc.sys_id}" /&gt;&#13;
+        &lt;/div&gt;&#13;
+&#13;
+        &lt;div class="buttons"&gt;&#13;
+          &lt;button id="submitBtn" onclick="return actionOK()"&gt;Submit&lt;/button&gt;&#13;
+          &lt;button id="cancelBtn" onclick="return handleCancel()"&gt;Cancel&lt;/button&gt;&#13;
+        &lt;/div&gt;&#13;
+      &lt;/div&gt;&#13;
+    &lt;/body&gt;&#13;
+  &lt;/html&gt;&#13;
+&lt;/j:jelly&gt;&#13;
+</description>
+        <direct>false</direct>
+        <endpoint>x_980818_ayanmursh_Zoom_Integration.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<j:jelly xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+  <j:set var="windowWidth" value="100px" />
+  <j:set var="windowHeight" value="100px" />
+
+  <html>
+    <head>
+      <title>Group Information</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #f4f4f4;
+        }
+
+        .container {
+          max-width: 400px; /* Changed width to max-width */
+          height: ${windowHeight};
+          background-color: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin: auto;
+          overflow: hidden;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+
+        .form-group label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+
+        .form-group input,
+        .form-group select {
+          width: 70%;
+          padding: 10px;
+          font-size: 14px;
+        }
+
+        .buttons {
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        .buttons button {
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+
+        .buttons button:last-child {
+          margin-right: 0;
+        }
+      </style>	
+    </head>
+    <body>
+      <div class="container">
+        <div class="form-group">
+          <label for="groupType">Subject</label>
+          <input type="text" id="groupType" name="groupType" placeholder="Enter Subject" />
+        </div>
+
+        <div class="form-group">
+          <label for="groupDescription">Agenda</label>
+          <input type="text" id="groupDescription" name="groupDescription" placeholder="Enter Agenda"/>
+          <input class="field-input form-control readonly disabled" type="hidden" name="record" id="record" value="${inc.sys_id}" />
+        </div>
+
+        <div class="form-group">
+          <label for="startTime">Start Time</label>
+          <input type="datetime-local" id="startTime" name="startTime" />
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Duration (minutes)</label>
+          <input type="number" id="duration" name="duration" />
+        </div>
+
+        <div class="form-group">
+          <label>Host Video</label>
+          <input type="checkbox" id="hostVideo" name="hostVideo" />
+        </div>
+
+        <div class="form-group">
+          <label>Participant Video</label>
+          <input type="checkbox" id="participantVideo" name="participantVideo" />
+        </div>
+
+        <div class="form-group">
+          <label>Join Before Host</label>
+          <input type="checkbox" id="joinBeforeHost" name="joinBeforeHost" />
+        </div>
+
+        <div class="form-group">
+          <label>Mute Upon Entry</label>
+          <input type="checkbox" id="muteUponEntry" name="muteUponEntry" />
+        </div>
+
+        <div class="form-group">
+          <label>Watermark</label>
+          <input type="checkbox" id="watermark" name="watermark" />
+        </div>
+
+        <div class="form-group">
+          <label>Auto Recording</label>
+          <select id="autoRecording" name="autoRecording">
+            <option value="none">None</option>
+            <option value="cloud">Cloud</option>
+            <option value="local">Local</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Audio</label>
+          <select id="audio" name="audio">
+            <option value="voip">VoIP</option>
+            <option value="telephony">Telephony</option>
+            <option value="both">Both</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="submitBtn" onclick="return actionOK()">Submit</button>
+          <button id="cancelBtn" onclick="return handleCancel()">Cancel</button>
+        </div>
+      </div>
+    </body>
+  </html>
+</j:jelly>
+]]></html>
+        <name>Zoom_Integration</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-06-26 06:08:44</sys_created_on>
+        <sys_id>70b198d193030210b99e71218bba10fb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Zoom_Integration</sys_name>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sys_ui_page_70b198d193030210b99e71218bba10fb</sys_update_name>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-06-26 06:21:39</sys_updated_on>
+    </sys_ui_page>
+</record_update>
