@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_980818_ayanmursh_zoom</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Zoom Integration Create Meeting</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    try {
+        var r = new sn_ws.RESTMessageV2('x_980818_ayanmursh.Zoom Integration', 'Create_meeting');
+        r.setStringParameterNoEscape('topic', current.agenda);
+        r.setStringParameterNoEscape('duration', current.duration);
+        r.setStringParameterNoEscape('start_time', current.start_time);
+        r.setStringParameterNoEscape('mute_upon_entry', current.mute_upon_entry);
+        r.setStringParameterNoEscape('participant_video', current.participant_video);
+        r.setStringParameterNoEscape('host_video', current.host_video);
+        r.setStringParameterNoEscape('watermark', current.watermark);
+        r.setStringParameterNoEscape('type', '2');
+        r.setStringParameterNoEscape('join_before_host', current.join_before_host);
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+    } catch (ex) {
+        var message = ex.message;
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ayan</sys_created_by>
+        <sys_created_on>2024-07-08 05:39:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8fbdfdc593130210b99e71218bba1082</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Zoom Integration Create Meeting</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AyanMurshad" source="x_980818_ayanmursh">5325a29293210210b99e71218bba1089</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AyanMurshad">5325a29293210210b99e71218bba1089</sys_scope>
+        <sys_update_name>sys_script_8fbdfdc593130210b99e71218bba1082</sys_update_name>
+        <sys_updated_by>ayan</sys_updated_by>
+        <sys_updated_on>2024-07-08 05:39:01</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8fbdfdc593130210b99e71218bba1082"/>
+</record_update>
