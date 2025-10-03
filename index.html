@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Balance Scale — Multiplayer Demo</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #0f1724; color: #eee; margin:0; padding:20px; }
+    .player { padding:6px; margin:4px 0; background:#1a2233; border-radius:6px; display:flex; justify-content:space-between; }
+    input,button { padding:6px; border-radius:6px; border:none; }
+    button { background:#f59e0b; color:#000; cursor:pointer; }
+    .log { margin-top:10px; background:#111a2c; padding:8px; height:200px; overflow:auto; border-radius:6px; }
+    table { width:100%; margin-top:10px; border-collapse: collapse; }
+    td,th { padding:6px; border-bottom:1px solid #333; }
+  </style>
+</head>
+<body>
+  <h1>Balance Scale — Multiplayer</h1>
+  <div>
+    Room: <input id="roomInput" placeholder="room name">
+    Name: <input id="nameInput" placeholder="your name">
+    <button id="joinBtn">Join Room</button>
+    <button id="readyBtn" disabled>Ready</button>
+    <button id="leaveBtn" disabled>Leave</button>
+  </div>
+  <div id="status"></div>
+  <div id="players"></div>
+  <table>
+    <thead><tr><th>Player</th><th>Score</th><th>Last Pick</th><th>Status</th></tr></thead>
+    <tbody id="scoreTable"></tbody>
+  </table>
+  <div class="log" id="log"></div>
+
+<script>
+const socket = io();
+let myId=null, room=null, players=[], state={round:0, penalty:1};
+
+function log(msg){ const el=document.getElementById("log"); el.innerHTML="<div>"+msg+"</div>"+el.innerHTML; }
+function render(){
+  const pDiv=document.getElementById("players"); pDiv.innerHTML="";
+  const table=document.getElementById("scoreTable"); table.innerHTML="";
+  players.forEach(p=>{
+    const div=document.createElement("div");
+    div.className="player";
+    if(p.id===myId && p.alive){
+      div.innerHTML=`<div>${p.name}</div>
+        <div><input id="pickInput" type="number" min="0" max="100" step="0.01">
+        <button id="submitPick">Submit</button></div>`;
+    }else div.innerHTML=`<div>${p.name}${p.isHost?" (host)":""}</div><div>${p.isReady?"Ready":""}</div>`;
+    pDiv.appendChild(div);
+
+    const tr=document.createElement("tr");
+    tr.innerHTML=`<td>${p.name}</td><td>${p.score}</td><td>${p.lastPick??"-"}</td><td>${p.alive?"Alive":"Out"}</td>`;
+    table.appendChild(tr);
+  });
+  const btn=document.getElementById("submitPick"); 
+  if(btn) btn.onclick=()=>socket.emit("submitPick",{room,pick:+document.getElementById("pickInput").value});
+}
+
+document.getElementById("joinBtn").onclick=()=>{
+  socket.emit("joinRoom",{room:room=document.getElementById("roomInput").value.trim(), name:document.getElementById("nameInput").value.trim()||"Player"});
+};
+document.getElementById("readyBtn").onclick=()=>socket.emit("playerReady",{room});
+document.getElementById("leaveBtn").onclick=()=>{ socket.emit("leaveRoom",{room}); location.reload(); };
+
+socket.on("connected",d=>{ myId=d.id; log("Connected"); });
+socket.on("roomJoined",d=>{ room=d.room; players=d.players; document.getElementById("readyBtn").disabled=false; document.getElementById("leaveBtn").disabled=false; render(); });
+socket.on("roomUpdate",d=>{ players=d.players; state=d; render(); });
+socket.on("roundResult",d=>{ state=d; players=d.players; log(`Round ${d.round}: target ${d.target}, winner: ${d.winnerName||"None"}`); render(); });
+socket.on("message",m=>log(m));
+</script>
+</body>
+</html>
